@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aa</title>
+</head>
+<body>
+	<script type="text/javascript">	
+		function mouseDown(nsEvent){
+			var theEvent = nsEvent ? nsEvent:window.event;
+			var locString= "X = " + theEvent.screenX + "  Y = " + theEvent.screenY;
+			alert(locString);
+		}
+		document.onmousedown = mouseDown;
+	</script>
+</body>
+</html>

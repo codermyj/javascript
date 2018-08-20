@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>arguments</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function getAvg(){
+			var l = arguments.length;
+			var sum = 0;
+			for(var i = 0; i < l; i++){
+				sum += arguments[i];
+			}
+			return sum/l;
+		}
+		console.log(getAvg(1,2,3,4,5, 6,7,8,9,10));
+	</script>
+</body>
+</html>

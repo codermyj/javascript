@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件</title>
+	<style type="text/css">
+		.lock{width:140px;height:30px;line-height: 30px;background:#00f;color:#fff;font-size:14px;text-align:center;border-radius:10px;cursor:pointer;margin-top:30px;}
+		.unlock{width:140px;height:30px;line-height: 30px;background:#ccc;color:#fff;font-size:14px;text-align:center;border-radius:10px;cursor:pointer;margin-top:30px;}
+	</style>
+</head>
+<body>
+	<input type="button" value="弹出" onclick="alert('我是按钮')">
+	<div id="btn" class="lock">锁定</div>
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		btn.onclick=function(){
+			cln = this.className;
+			if(cln == "lock"){
+				this.className = "unlock";
+				this.innerHTML = "解锁";
+			}else{
+				this.className = "lock";
+				this.innerHTML = "锁定";
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>onsubmit</title>
+	<style type="text/css">
+		.box{
+			width: 200px;
+			height: 200px;
+			background: #ff0;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var box = document.getElementById("box");
+			box.onmousedown = function(){
+				console.log("我被按下了");
+			};
+			box.onmouseup = function(){
+				console.log("我被松开了");
+			};
+			box.onmousemove = function(){
+				console.log("我被移动了");
+			};
+
+		}
+	</script>
+</head>
+<body>
+	<div class="box" id="box">拖动</div>
+</body>
+</html>

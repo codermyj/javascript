@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件类型</title>
+	<style type="text/css">
+		.box{
+			padding: 50px;
+		}
+		.left,.tip{
+			float: left;
+		}
+		.left{
+			margin-right: 10px;
+		}
+		.tip{
+			display: none;
+			font-size: 14px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			//获取文本框和提示框
+			var phone = document.getElementById("phone"), tip = document.getElementById("tip");
+
+			phone.onfocus=function(){
+				tip.style.display = "block";
+			};
+
+			phone.onblur=function(){
+				var phoneVal = this.value;
+				if(phoneVal.length==11 && !isNaN(phoneVal)){
+					console.log("输入正确");
+				}else{
+					console.log("输入手机号错误");
+				}
+				console.log(phoneVal.length==11, !isNaN(phoneVal));
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div class="box">
+		<div class="left">
+			<input type="text" id="phone" placeholder="请输入手机号码">
+		</div>
+		<div class="tip" id="tip">
+			请输入有效的手机号码
+		</div>
+	</div>
+</body>
+</html>

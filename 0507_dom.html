@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dom</title>
+</head>
+<body>
+	<div class="aaa" id="aaa">
+		aaa
+	</div>
+	<ul id="list1">
+		<li>服务器开发</li>
+		<li>前端开发</li>
+		<li>UI设计</li>
+	</ul>
+	<ul id="list2">
+		<li>java开发</li>
+		<li>python开发</li>
+		<li>js开发</li>
+	</ul>
+	<script type="text/javascript">
+		var xId = document.getElementById("aaa");
+		xId.style.color = "#f00";
+		console.log(xId)
+		var xTag = document.getElementById("list2").getElementsByTagName("li");
+		console.log(xTag[0]);
+	</script>
+</body>
+</html>

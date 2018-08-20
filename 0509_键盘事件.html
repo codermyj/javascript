@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>键盘事件</title>
+	<style type="text/css">
+		.text span{
+			font-weight: bold;
+			color: #f00;
+		}
+		em{
+			font-style: normal;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p class="text">您还可以输入<span><em id="count">30</em>/30</span></p>
+		<div class="input">
+			<textarea name="" id="text" cols="70" rows="4"></textarea>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var text = document.getElementById("text");
+		var total = 30;
+		var count = document.getElementById("count");
+		//绑定键盘事件
+		document.onkeyup = function(){
+			var len = text.value.length;
+			var allow = total - len;
+			if (allow < 0) {
+				text.setAttribute("readonly", "readonly");
+			}
+			count.innerHTML = allow;
+
+		}
+	</script>
+</body>
+</html>

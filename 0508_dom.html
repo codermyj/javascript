@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dom</title>
+</head>
+<body>
+	<p id="text" align="center" data-type="title">文本</p>
+	<div class="box" id="box">
+		<ul id="ah">
+			<li><i>python</i></li>
+			<li>nodejs</li>
+			<li>java</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		// var id = document.getElementById("ah").getElementsByTagName("li");
+		// id[0].innerHTML = id[0].innerHTML + "语言";
+		// id[1].className = "current";
+		// console.log(id[0].innerHTML);
+		var p = document.getElementById("text");
+		console.log(p.id, p.align, p.getAttribute("data-type"));
+	</script>
+</body>
+</html>
